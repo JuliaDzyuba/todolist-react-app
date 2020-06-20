@@ -1,38 +1,16 @@
+* {
+  box-sizing: border-box;
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  padding-top: 40px;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  background: #ffafc5 url(https://i.pinimg.com/736x/e7/25/dd/e725dd54c20eb5f793bc5838da704c14.jpg) no-repeat center top / cover;
+  background: #ffafc5 url(https://mewallpaper.com/thumbnail/games/9265-workspace-desk-flat-lay-hq-image-free-wallpaper.jpg) no-repeat center top / cover;
+  background: #e6d0a8 url(https://i.pinimg.com/736x/09/1d/4f/091d4f1bebc76ea61eec0b9d8af26e5f.jpg) no-repeat center top / cover;
+  
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  background-color: rgba(255, 255, 255, 0.9);
 }
