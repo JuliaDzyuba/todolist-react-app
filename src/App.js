@@ -4,7 +4,7 @@ import './App.css';
 
 const App = () => {
   const [task, setTask] = useState('');
-  const [allTasks, setTaskList] = useState(localStorage.length < 1 ? [] : JSON.parse(localStorage.getItem('tasksList')));
+  const [allTasks, setTaskList] = useState(JSON.parse(localStorage.getItem('tasksList')) || []);
 
   localStorage.setItem('tasksList', JSON.stringify(allTasks));
 
@@ -31,9 +31,6 @@ const App = () => {
   }
 
   const deleteTask = (id) => {
-    // console.log(id);
-    // const index = allTasks.map( item => item.id).indexOf(id);
-    // console.log(index);
     const arr = allTasks.filter( (item) => item.id !== id );
     setTaskList( [...arr]);
     localStorage.setItem('tasksList', JSON.stringify(allTasks));
@@ -41,8 +38,6 @@ const App = () => {
 
   const handleChange = id => {
     const index = allTasks.map( item => item.id).indexOf(id);
-    // console.log(index);
-    // console.log(allTasks[index]);
     allTasks[index].completed = !allTasks[index].completed;
     let activeTasks = allTasks.filter( item => item.completed === false);
     let doneTasks = allTasks.filter( item => item.completed === true);
