@@ -96,6 +96,17 @@ const App = () => {
       <div className="todo-date">
         <span>{weekDay}</span> <span>{dayNow}</span> <span>{timer.toLocaleTimeString()}</span>
       </div>
+      <div className="todo-generator">
+        <input 
+          type="text"
+          ref={inputRef}
+          onChange={getInputValue}
+        />
+        <button
+          title="add new task"
+          onClick={addTask}        
+        >Add task</button>
+      </div>
       <div className="todo-list">
         {allTasks.map( (item, index) => {
             return (
@@ -110,17 +121,7 @@ const App = () => {
           })
         }
       </div>
-      <div className="todo-generator">
-        <input 
-          type="text"
-          ref={inputRef}
-          onChange={getInputValue}
-        />
-        <button
-          title="add new task"
-          onClick={addTask}        
-        >Add task</button>
-      </div>
+      
     </div>
   )
 }
